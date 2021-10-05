@@ -6,33 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mozifilmek</title>
     <script src="main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <div>
         <form>
             <div>
-                <h3>Adja meg a film nevét:</h3>
-                <input type="text" id="nevIn">
+                <h4>Adja meg a film nevét:</h4>
+                <input class="form-control" type="text" id="nevIn">
             </div>
             <div>
-                <h3>Adja meg a film rendezőjét:</h3>
-                <input type="text" id="rendIn">
+                <h4>Adja meg a film rendezőjét:</h4>
+                <input class="form-control" type="text" id="rendIn">
             </div>
             <div>
-                <h3>Adja meg a kiadási évet</h3>
-                <input type="number" id="evIn">
+                <h4>Adja meg a kiadási évet:</h4>
+                <input class="form-control" type="number" id="evIn">
             </div>
             <div>
-                <input type="button" value="Hozzáad" onclick="addFilm()">
+                <input class="btn btn-primary" type="button" value="Hozzáad" onclick="addFilm()">
             </div>
         </form>
     </div>
-    <div>
-        <button onclick="createTable()">Listázás</button>
-    </div>
-    <table id="listTable">
 
-    </table>
+    <div>
+        <div>
+            <button class="btn btn-secondary" onclick="addTableData()">Listázás</button>
+        </div>
+    </div>
+
+    <div id="tableField">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nev</th>
+                    <th>Rendezo</th>
+                    <th>Kiadasi Ev</th>
+                </tr>
+            </thead>
+            <tbody id="tableData">
+
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

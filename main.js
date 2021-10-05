@@ -36,7 +36,14 @@ function addFilm() {
     document.getElementById('evIn').value = "";
 }
 
-function createTable() {
+function removeTable() {
+    let t = document.getElementById('tableData');
+    t.innerHTML = "";
+}
+
+function addTableData() {
+    removeTable();
+
     for (f of filmArr) {
         let tr = document.createElement("tr");
 
@@ -56,6 +63,8 @@ function createTable() {
         tr.appendChild(td2);
         tr.appendChild(td3);
           
-        document.getElementById('listTable').appendChild(tr);
+        document.getElementById('tableData').appendChild(tr);
     }
+
+    filmArr.length = 0;
 }
