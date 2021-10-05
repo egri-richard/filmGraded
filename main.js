@@ -6,7 +6,17 @@ class Film{
     }
 
     toString() {
-        return `Cím: ${this.nev}; Rendezte: ${this.rendezo}; Kiadva: ${this.kiadasiEv};`
+        return `Cím: ${this.nev}; Rendezte: ${this.rendezo}; Kiadva: ${this.kiadasiEv}`
+    }
+
+    getNevString() {
+        return `${this.nev}`
+    }
+    getRendString() {
+        return `${this.rendezo}`
+    }
+    getKiadString() {
+        return `${this.kiadasiEv}`
     }
 }
 
@@ -28,10 +38,24 @@ function addFilm() {
 
 function createTable() {
     for (f of filmArr) {
-        let tag = document.createElement("h6");
-        let film = document.createTextNode(f.toString());
-        tag.appendChild(film);
-        tag.style.borderBottom = "solid black";
-        document.getElementById('listDiv').appendChild(tag);
+        let tr = document.createElement("tr");
+
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
+
+        let a = document.createTextNode(f.getNevString());
+        let b = document.createTextNode(f.getRendString());
+        let c = document.createTextNode(f.getKiadString());
+
+        td1.appendChild(a);
+        td2.appendChild(b);
+        td3.appendChild(c);
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+          
+        document.getElementById('listTable').appendChild(tr);
     }
 }
