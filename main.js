@@ -28,7 +28,7 @@ function addFilm() {
     let evIn = document.getElementById('evIn').value;
 
     let f = new Film(nevIn, rendIn, evIn);
-    console.log(f.toString());
+    //console.log(f.toString());
     filmArr.push(f);
 
     document.getElementById('nevIn').value = "";

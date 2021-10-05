@@ -10,45 +10,47 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div>
-        <form>
-            <div>
-                <h4>Adja meg a film nevét:</h4>
-                <input class="form-control" type="text" id="nevIn">
-            </div>
-            <div>
-                <h4>Adja meg a film rendezőjét:</h4>
-                <input class="form-control" type="text" id="rendIn">
-            </div>
-            <div>
-                <h4>Adja meg a kiadási évet:</h4>
-                <input class="form-control" type="number" id="evIn">
-            </div>
-            <div>
-                <input class="btn btn-primary" type="button" value="Hozzáad" onclick="addFilm()">
-            </div>
-        </form>
-    </div>
-
-    <div>
-        <div>
-            <button class="btn btn-secondary" onclick="addTableData()">Listázás</button>
+    <div class="container">
+        <div class="">
+            <form>
+                <div class="">
+                    <h4>Adja meg a film nevét:</h4>
+                    <input class="form-control" type="text" id="nevIn">
+                </div>
+                <div class="">
+                    <h4>Adja meg a film rendezőjét:</h4>
+                    <input class="form-control" type="text" id="rendIn">
+                </div>
+                <div class="">
+                    <h4>Adja meg a kiadási évet:</h4>
+                    <input class="form-control" type="number" id="evIn">
+                </div>
+                <div>
+                    <input class="btn btn-primary" type="button" value="Hozzáad" onclick="addFilm()">
+                </div>
+            </form>
         </div>
-    </div>
 
-    <div id="tableField">
-        <table>
-            <thead>
-                <tr>
-                    <th>Nev</th>
-                    <th>Rendezo</th>
-                    <th>Kiadasi Ev</th>
-                </tr>
-            </thead>
-            <tbody id="tableData">
+        <div>
+            <div>
+                <button class="btn btn-secondary" onclick="addTableData()">Listázás</button>
+            </div>
+        </div>
 
-            </tbody>
-        </table>
+        <div id="tableField">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>Nev</th>
+                        <th>Rendezo</th>
+                        <th>Kiadasi Ev</th>
+                    </tr>
+                </thead>
+                <tbody id="tableData">
+
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 </html>

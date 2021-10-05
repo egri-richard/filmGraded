@@ -6,3 +6,10 @@ table {
     margin: 10px 10px 10px 10px;
 }
 
+body {
+    background-color: lightslategray;
+}
+
+h4 {
+    color: linen;
+}
