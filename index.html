@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mozifilmek</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    
+    <div>
+        <form>
+            <div>
+                <h3>Adja meg a film nevét:</h3>
+                <input type="text" id="nevIn">
+            </div>
+            <div>
+                <h3>Adja meg a film rendezőjét:</h3>
+                <input type="text" id="rendIn">
+            </div>
+            <div>
+                <h3>Adja meg a kiadási évet</h3>
+                <input type="number" id="evIn">
+            </div>
+            <div>
+                <input type="button" value="Hozzáad" onclick="addFilm()">
+            </div>
+        </form>
+    </div>
+    <div>
+        <button onclick="createTable()">Listázás</button>
+    </div>
+    <div id="listDiv">
+
+    </div>
 </body>
 </html>
